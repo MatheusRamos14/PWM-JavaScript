@@ -1,0 +1,25 @@
+function banco(valor) {
+    let nota100 = Math.floor(valor / 100)
+    nota100 < 1 ? sobra100 = valor : sobra100 = valor % 100
+    nota100 < 1 ? '' : console.log(`${nota100}x R$100`)
+    let nota50 = Math.floor(sobra100 / 50)
+    nota50 < 1 ? sobra50 = sobra100 : sobra50 = sobra100 % 50; nota50 < 1 ? '' : console.log(`${nota50}x R$50`)
+    let nota10 = Math.floor(sobra50 / 10)
+    nota10 < 1 ? sobra10 = sobra50 : sobra10 = sobra50 % 10; nota10 < 1 ? '' : console.log(`${nota10}x R$10`)
+    let nota5 = Math.floor(sobra10 / 5)
+    nota5 < 1 ? sobra5 = sobra10 : sobra5 = sobra10 % 5; nota5 < 1 ? '' : console.log(`${nota5}x R$5`)
+    let nota1 = Math.floor(sobra5 / 1)
+    nota1 < 1 ? '' : console.log(`${nota1}x R$1`)
+}
+
+banco(120)
+console.log('----------------')
+banco(543)
+console.log('----------------')
+banco(45)
+console.log('----------------')
+banco(13)
+console.log('----------------')
+banco(3)
+console.log('----------------')
+banco(21313)
